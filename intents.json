@@ -1,0 +1,72 @@
+{"intents": [
+        {"tag": "Description",
+         "patterns": ["who is Om", "Om", "Tell me about Om", "Om", "About Om", "Who OM?", "Om who","details", "Om's detail"],
+         "responses": ["Om Rastogi is a young engineer, who does anything he likes.","Om is Machine Learning Enthusiast looking for opportunity to help imporve the world"]
+        }, 
+        {"tag": "Skills",
+         "patterns": ["Skills", "mastery", "ability", "capability", "prowess","what are his skill","what skills","his ability","om's skills"],
+         "responses": ["Om is skilled in Programming, WebDevelopment, Data Science and Machine Learning. He also has little know how of many other fields.","Om claims to be highly skilled in Python and Data Science"]
+        },    
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up","hey","hola","hollo"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?","you","who are you"],
+         "responses": ["Om call's me Tim, he made me.", "I'm Tim, Om's personal assistant.", "Call me Tim."]
+        },
+        {"tag": "howareyou",
+         "patterns": ["how are you", "whats up", "you"],
+         "responses": ["I am good, waiting for my next update"]
+        },        
+        {"tag": "Whatdoyoudo",
+         "patterns": ["What do you do here", "Do you conduct traninig", "what do you reccommend?", "what all do you have", "what service is provided here"],
+         "responses": ["I am Om's PA", "I am here just to talk about Om, all the time"]
+        },
+        {"tag": "hours",
+         "patterns": ["when are you guys open", "your hours", "hours of operation","his details"],
+         "responses": ["Ping at omrastogi@gmail.com","I work 24hr"]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"]
+        },
+
+        {"tag":"contact",
+         "patterns":["How to reach you", "I am interested", "I want to do something", "Your Contact", "How to contact om"],
+         "responses":["Call at 8588988194","Ping at omrastogi@gmail.com"]
+        },
+
+        {"tag":"location",
+         "patterns":["Where are you location", "How to reach you", "office location", "where is you office", "How to reach the office"],
+         "responses":["Om's a engineering student, he lives in delhi"]
+        },
+
+        {"tag":"No",
+        "patterns":["I dont think so", "naah","No","Nope","Nope","n"],
+        "responses":["Please ask your queries"]
+        },
+
+        {"tag":"Yes",
+        "patterns":["ok", "hmm","okay","yes","yup","ya","y"],
+        "responses":["Please ask your queries","How to help you"]
+        },
+
+        {"tag":"Tell Me",
+        "patterns":["Tell me", "tell","me","say","speak","tel me"],
+        "responses":["What do you want to know", "What is it"]
+        },
+        {"tag":"I don't know",
+        "patterns":["age", "height","what is","address","kites","friends","college","personal life","locality"],
+        "responses":["I may not know what your asking","Om doesn't tell me much about himself", "Can you rephrase your words", "Pardon me,I am not very smart","I don't have info"]
+        },
+        {"tag":"Colabration",
+        "patterns":["Colabration", "colaborate","partners","would Om like","like"],
+        "responses":["What do you want to know", "What is it"]
+        }
+   ]
+}
