@@ -5,6 +5,7 @@ astor==0.8.1
 auto-py-to-exe==2.7.8
 bottle==0.12.18
 bottle-websocket==0.2.9
+certifi==2020.6.20
 cffi==1.14.3
 click==7.1.2
 distlib==0.3.1
@@ -31,10 +32,12 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
 Markdown==3.2.2
 MarkupSafe==1.1.1
+mod-wsgi==4.7.1
 mysqlclient==2.0.1
 nltk==3.5
 numpy==1.19.1
 pefile==2019.4.18
+pipenv==2020.8.13
 protobuf==3.13.0
 pycparser==2.20
 pyinstaller==4.0
@@ -52,6 +55,7 @@ tensorflow-estimator==1.14.0
 termcolor==1.1.0
 tqdm==4.49.0
 virtualenv==20.0.31
+virtualenv-clone==0.5.4
 waitress==1.4.4
 Werkzeug==1.0.1
 whichcraft==0.6.1
