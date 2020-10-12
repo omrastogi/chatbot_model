@@ -34,10 +34,12 @@ def messageReceived(methods=['GET', 'POST']):
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['POST']):
 	try:
-		socketio.emit('my response', json, callback=messageReceived)			
-		bot(json['message'])
+		socketio.emit('my response', json, callback=messageReceived)
+		sender('checking logs')			
+		# bot(json['message'])
 	except:
 		pass
+
 
 def bot(message):
 	if session['greetings'] == False:		
