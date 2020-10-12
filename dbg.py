@@ -2,7 +2,7 @@ from flask import Flask, render_template, session
 from flask_socketio import SocketIO
 import tensorflow
 from Talk import ask
-from waitress import serve
+
 
 print ("This is socket file")
 app = Flask(__name__)
@@ -98,4 +98,4 @@ def Isname(name):
 if __name__ == '__main__':
 	socketio.run(app, debug=True)
 	# socketio.run(app, debug=True, host = '0.0.0.0')
-	# serve(app)
+	
