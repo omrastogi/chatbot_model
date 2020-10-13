@@ -35,8 +35,8 @@ def messageReceived(methods=['GET', 'POST']):
 def handle_my_custom_event(json, methods=['POST']):
 	try:
 		socketio.emit('my response', json, callback=messageReceived)
-		Sender('checking logs')			
-		# bot(json['message'])
+		# Sender('checking logs')			
+		bot(json['message'])
 	except:
 		pass
 
