@@ -2,6 +2,8 @@ absl-py==0.10.0
 astor==0.8.1
 cffi==1.14.3
 click==7.1.2
+dnspython==1.16.0
+eventlet==0.28.0
 Flask==1.0.2
 Flask-SocketIO==4.3.1
 gast==0.4.0
@@ -22,6 +24,7 @@ Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
 Markdown==3.2.2
 MarkupSafe==1.1.1
+monotonic==1.5
 nltk==3.5
 numpy==1.19.1
 protobuf==3.13.0
