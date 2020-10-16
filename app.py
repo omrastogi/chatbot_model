@@ -2,7 +2,8 @@ from flask import Flask, render_template, session
 from flask_socketio import SocketIO
 import tensorflow
 from Talk import ask
-
+import eventlet 
+eventlet.monkey_patch()
 
 print ("This is socket file")
 app = Flask(__name__)
