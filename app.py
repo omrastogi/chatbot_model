@@ -2,14 +2,13 @@ from flask import Flask, render_template, session
 from flask_socketio import SocketIO
 import tensorflow
 from Talk import ask
-# import eventlet 
-# eventlet.monkey_patch()
+
 
 print ("This is socket file")
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 socketio = SocketIO(app)
-
+print ("Socket obeject created")
 ## Config MySQL
 # mysql = MySQL()
 # app.config['MYSQL_HOST'] = 'localhost'
@@ -99,6 +98,6 @@ def Isname(name):
 
 
 if __name__ == '__main__':
-	socketio.run(app, debug=True, host = '0.0.0.0')
+	socketio.run(app,host = '0.0.0.0')
 	# socketio.run(app, debug=True, host = '0.0.0.0')
 	
