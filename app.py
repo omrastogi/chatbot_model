@@ -33,7 +33,7 @@ def messageReceived(methods=['GET', 'POST']):
 
 # Whenever user writes a message 
 @socketio.on('my event')
-def handle_my_custom_event(json, methods=['POST']):
+def handle_my_custom_event(json, methods=['GET','POST']):
 	print ('got the message')
 	try:
 		socketio.emit('my response', json, callback=messageReceived)
