@@ -23,6 +23,7 @@ print ("Socket obeject created")
 #starting point for the app, every time the page is open, session is called.
 @app.route('/')
 def sessions():
+	print ('sessions')
 	session['greetings'] = True
 	return render_template('session1.html')
 
@@ -33,8 +34,10 @@ def messageReceived(methods=['GET', 'POST']):
 # Whenever user writes a message 
 @socketio.on('my event')
 def handle_my_custom_event(json, methods=['POST']):
+	print ('got the message')
 	try:
 		socketio.emit('my response', json, callback=messageReceived)
+		print ('taking message')
 		# Sender('checking logs')			
 		bot(json['message'])
 	except:
