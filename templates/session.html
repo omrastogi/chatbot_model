@@ -17,7 +17,7 @@
         position: fixed;
         bottom: 0px;
         right: 0px;
-        width: 400px;
+        width: 300px;
         height: 40px;
       }
 
@@ -28,7 +28,7 @@
         border: none;
         cursor: pointer;
         opacity: 0.8;
-        width: 400px;
+        width: 300px;
         height: 40px;
       }
 
@@ -65,67 +65,80 @@
         width: 100%;
         /*border: 1px solid;*/
       }
+      .msg{
+        word-wrap:break-word; 
+        padding:2px 5px;
 
-
-    /*---------------------------*/
-
-      .message_holder {
-        margin-bottom: 2em;
       }
 
-      .chat {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        background: #f1f0e8;
+      .right{
+        text-align:right; 
+        font-size: 16px;
+        overflow-x: hidden;
         
       }
-      .chat-r {
-        display: flex;
-      }
-      .chat-r .sp {
-        flex: 1;
-      }
 
-      .chat-l {
-        display: flex;
-      }
-      .chat-l .sp {
-        flex: 1;
-      }
-      .mess {
-        max-width: 70%;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 5px;
-
-        border-radius: 15px;
-        font-weight: bold;
-        margin-bottom: 3px;
-        cursor: pointer;
-      }
-
-      .mess-l{
-        background: #e08953;
-        border-bottom-left-radius:0;
-      }
-
-      .mess p {
-        /*word-break: break-all;*/
-        /*text-align:justify; */
-        color: white;
-        font-size: 15px;
+      .left{
+        text-align:left; 
+        font-size: 16px;
         overflow-x: hidden;
-
+        
       }
 
-      .mess-r {
-        background: #8c53e0;
+      .rcontainer{
+        order: -1;
+        max-width: 70%;
+        color: #fff;
+        margin: 1px 0;
+        padding: 6px 12px; 
+        border-radius: 12px;
+        background-color: #e08953;
         border-bottom-right-radius:0; 
       }
 
 
-     
+
+      .lcontainer{
+        max-width: 70%;
+        color: #fff;
+        margin: 1px 0;
+        padding: 6px 12px; 
+        border-radius: 12px;
+        /*background-color: #28a7ab;*/
+        background-color: #8c53e0;
+        border-bottom-left-radius:0; 
+
+      }
+
+
+
+      /* When the textarea gets focus, do something */
+/*      .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+      }*/
+
+      /* Set a style for the submit/send button */
+/*      .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+      }*/
+
+      /* Add a red background color to the cancel button */
+/*      .form-container .cancel {
+        background-color: red;
+      }
+*/
+      /* Add some hover effects to buttons */
+/*      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }*/
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
@@ -135,17 +148,17 @@
   <body>
   <button class="open-button" onclick="openForm();">Chat</button>
   <div class="chat-popup" id="myForm">
-    <button type="button" class="close-button" onclick="closeForm();">Chat</button>
+    <button type="button" class="close-button" onclick="closeForm()">Chat</button>
     
-    <div class="chatLayout" style="background-color: #fcfdff; border: 1px solid #ebedf0; width:400px;">
+    <div class="chatLayout" style="background-color: #fcfdff; border: 1px solid #ebedf0; width:300px;">
 
-<!--     <div class="ChatHead" style="text-align: right;font-size: 8px; color: #ffffff; background-color: #1a5799;">
+    <div class="ChatHead" style="text-align: right;font-size: 8px; color: #ffffff; background-color: #1a5799;">
             <span>Developed by Om Rastogi</span>
-    </div> -->
-    <div id="chat-box" style="overflow-y: scroll; height: 500px; padding: 10px 0px 0px 0px;">
+    </div>
+    <div id="chat-box" style="overflow-y: scroll; height: 350px; padding: 10px 0px 0px 0px;">
 
-   <!--      <div class="message_holder"><div class="chat-l"><div class="mess mess-l"><p><b>Hum hain Pappu<br>Hum Omwa ke kutrim sahaayak hain</b></p></div><div class="sp"></div></div></div> -->
-        <div class="message_holder"><div class="chat-l"><div class="mess mess-l"><p><b>Hi, I am Tim<br>I am Om's Artificial Assistant</b></p></div><div class="sp"></div></div></div>
+        
+        <div class="message_holder"><div class="left msg"><p><span class="lcontainer">Hi I am Tim</span></p></div>'</div>
     </div>
 
     <form action="" method="POST">
@@ -196,10 +209,10 @@
         if( typeof msg.user_name !== 'undefined') {
           
           if (msg.user_name == 'User'){
-          $( 'div.message_holder' ).append( '<div class="chat-r"><div class="sp"></div><div class="mess mess-r"><p>' +msg.message+'</p></div></div>' )
+          $( 'div.message_holder' ).append( '<div class="right msg" ><p><span class="rcontainer">'+msg.message+'</span></p></div>' )
         }
         else if (msg.user_name == 'Bot'){
-          $( 'div.message_holder' ).append( '<div class="chat-l"><div class="mess mess-l"><p>'+msg.message+'</p></div><div class="sp"></div></div>' )
+          $( 'div.message_holder' ).append( '<div class="left msg" ><p><span class="lcontainer">'+msg.message+'</span></p></div>' )
         }
         // else if (msg.user_name == 'Bot'){
         //   $( 'div.message_holder' ).append( '<div class="left msg" "><p><span class="" style="background-color: #dd92b2;color: #fff;margin: 1px 0;padding: 6px 12px; border-radius: 12px;">'+msg.message+'</span></p></div>' )

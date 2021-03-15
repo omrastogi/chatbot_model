@@ -1,11 +1,11 @@
 {"intents": [
         {"tag": "Description",
          "patterns": ["who is Om", "Om", "Tell me about Om", "Om", "About Om", "Who OM?", "Om who","details", "Om's detail"],
-         "responses": ["Om Rastogi is a young engineer, who does anything he likes.","Om is Machine Learning Enthusiast looking for opportunity to help imporve the world"]
+         "responses": ["Om Rastogi is a young engineer","Om is student looking for opportunity to help imporve the world"]
         }, 
         {"tag": "Skills",
          "patterns": ["Skills", "mastery", "ability", "capability", "prowess","what are his skill","what skills","his ability","om's skills"],
-         "responses": ["Om is skilled in Programming, WebDevelopment, Data Science and Machine Learning. He also has little know how of many other fields.","Om claims to be highly skilled in Python and Data Science"]
+         "responses": ["Om is skilled in Programming and Machine Learning. He also has little know how of some other fields.","Om claims to be skilled in Python"]
         },    
         {"tag": "greeting",
          "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up","hey","hola","hollo"],
@@ -17,7 +17,7 @@
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?","you","who are you"],
-         "responses": ["Om call's me Tim, he made me.", "I'm Tim, Om's personal assistant.", "Call me Tim."]
+         "responses": ["Everybody call's me Tim.", "I'm Tim, Om's friend.", "Call me Tim."]
         },
         {"tag": "howareyou",
          "patterns": ["how are you", "whats up", "you"],
@@ -25,7 +25,7 @@
         },        
         {"tag": "Whatdoyoudo",
          "patterns": ["What do you do here", "Do you conduct traninig", "what do you reccommend?", "what all do you have", "what service is provided here"],
-         "responses": ["I am Om's PA", "I am here just to talk about Om, all the time"]
+         "responses": ["I am here to interact", "I am here just to talk about Om, all the time","I am a demonstration of PROJECT Chatbot"]
         },
         {"tag": "hours",
          "patterns": ["when are you guys open", "your hours", "hours of operation","his details"],
@@ -39,6 +39,11 @@
         {"tag":"contact",
          "patterns":["How to reach you", "I am interested", "I want to do something", "Your Contact", "How to contact om"],
          "responses":["Call at 8588988194","Ping at omrastogi@gmail.com"]
+        },
+
+        {"tag":"interest",
+         "patterns":["Om does", "His Interest", "Hobbies", "What do he do", "What does Om do"],
+         "responses":["Om like to read books and listen music"]
         },
 
         {"tag":"location",
@@ -60,13 +65,15 @@
         "patterns":["Tell me", "tell","me","say","speak","tel me"],
         "responses":["What do you want to know", "What is it"]
         },
+
         {"tag":"I don't know",
         "patterns":["age", "height","what is","address","kites","friends","college","personal life","locality"],
         "responses":["I may not know what your asking","Om doesn't tell me much about himself", "Can you rephrase your words", "Pardon me,I am not very smart","I don't have info"]
         },
+        
         {"tag":"Colabration",
         "patterns":["Colabration", "colaborate","partners","would Om like","like"],
-        "responses":["What do you want to know", "What is it"]
+        "responses":["What do you want to know", "What is it","Om is excited guy do contact him"]
         }
    ]
 }
